@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Walmart Link Converter</title>
+  <style>
+    body {
+      width: 300px;
+      height: 250px;
+      font-family: 'Roboto', sans-serif;
+      padding: 20px;
+      background-color: #f0f0f0;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    h3 {
+      font-size: 16px;
+      margin: 0;
+      padding: 10px 0;
+      color: #333;
+      text-align: center;
+    }
+
+    #logo {
+      width: 30px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+    button {
+      padding: 10px;
+      width: 100%;
+      font-size: 14px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-bottom: 10px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #status {
+      font-size: 12px;
+      text-align: center;
+      padding: 8px;
+      border-radius: 8px;
+      color: #fff;
+      display: none;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+    }
+
+    .success {
+      background-color: #28a745;
+    }
+
+    .error {
+      background-color: #dc3545;
+    }
+
+    #openTabBtn {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Walmart_Spark.svg/1925px-Walmart_Spark.svg.png" alt="Walmart Logo">
+  <h3>Walmart Link Converter</h3>
+  <button id="convertBtn">Convert Link</button>
+  <button id="openTabBtn">Open in New Tab</button>
+  <div id="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
