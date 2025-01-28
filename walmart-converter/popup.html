@@ -1,58 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Walmart Link Converter</title>
   <style>
     body {
-      width: 300px;
-      height: 250px;
+      width: 320px;
+      height: 280px;
       font-family: 'Roboto', sans-serif;
+      margin: 0;
       padding: 20px;
-      background-color: #f0f0f0;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: space-between;
+      color: #333;
     }
 
     h3 {
-      font-size: 16px;
-      margin: 0;
-      padding: 10px 0;
+      font-size: 18px;
       color: #333;
       text-align: center;
+      margin: 0;
+      padding-bottom: 10px;
     }
 
     #logo {
-      width: 30px;
+      width: 40px;
       height: auto;
       margin-bottom: 15px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     button {
-      padding: 10px;
+      padding: 12px;
       width: 100%;
       font-size: 14px;
       background-color: #007bff;
       color: white;
       border: none;
-      border-radius: 20px;
+      border-radius: 25px;
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.2s ease;
       margin-bottom: 10px;
     }
 
     button:hover {
       background-color: #0056b3;
+      transform: scale(1.05);
+    }
+
+    button:active {
+      background-color: #003f7f;
     }
 
     #status {
-      font-size: 12px;
+      font-size: 14px;
       text-align: center;
       padding: 8px;
-      border-radius: 8px;
+      border-radius: 12px;
       color: #fff;
       display: none;
       position: absolute;
@@ -70,17 +81,41 @@
       background-color: #dc3545;
     }
 
-    #openTabBtn {
-      display: none;
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
     }
+
+    .logo-container img {
+      width: 30px;
+      height: auto;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-container img:hover {
+      transform: scale(1.1);
+    }
+
   </style>
 </head>
 <body>
   <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Walmart_Spark.svg/1925px-Walmart_Spark.svg.png" alt="Walmart Logo">
   <h3>Walmart Link Converter</h3>
   <button id="convertBtn">Convert Link</button>
-  <button id="openTabBtn">Open in New Tab</button>
   <div id="status"></div>
+
+  <div class="logo-container">
+    <a href="https://github.com/AkaCurtis/Walmart-converter/tree/main" target="_blank" title="Source Code">
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Logo">
+    </a>
+
+    <a href="https://cash.app/$WRDSY" target="_blank" title="Support the project!">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Square_Cash_app_logo.svg/640px-Square_Cash_app_logo.svg.png" alt="Cash App Logo">
+    </a>
+  </div>
 
   <script src="popup.js"></script>
 </body>
